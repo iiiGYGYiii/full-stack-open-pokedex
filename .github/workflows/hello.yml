@@ -3,12 +3,12 @@ name: Mi First Action!
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
-  hello_action_job:
+  hello_world_job:
     runs-on: ubuntu-18.04
     steps:
       - name: Say hello
-      run: |
-        echo "hey action!"
+        run: |
+          echo "Hello World!"
