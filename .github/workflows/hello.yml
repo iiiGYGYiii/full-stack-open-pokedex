@@ -1,0 +1,14 @@
+name: Mi First Action!
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  hello_action_job:
+    runs-on: ubuntu-18.04
+    steps:
+     - name: Say hello
+      runs: |
+        echo "hey action!"
