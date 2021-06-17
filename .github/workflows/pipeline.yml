@@ -7,7 +7,7 @@ on:
   pull_request:
     branches: [main]
     types: [opened, synchronize]
-
+#status should go green
 jobs:
   simple_deployment_pipeline:
     runs-on: ubuntu-18.04
