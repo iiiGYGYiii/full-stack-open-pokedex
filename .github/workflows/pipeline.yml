@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize]
 
 jobs:
   simple_deployment_pipeline:
@@ -34,4 +37,5 @@ jobs:
           heroku_app_name: "pokedex-iiigygyiii"
           heroku_email: "saritamar0810@gmail.com"
           healthcheck: "https://pokedex-iiigygyiii.herokuapp.com/health"
-          checkstring: "oks"
+          checkstring: "ok"
+          rollbackonhealthcheckfailed: true
