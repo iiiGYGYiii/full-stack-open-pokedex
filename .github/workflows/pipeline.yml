@@ -34,4 +34,4 @@ jobs:
           heroku_app_name: "pokedex-iiigygyiii"
           heroku_email: "saritamar0810@gmail.com"
           healthcheck: "https://pokedex-iiigygyiii.herokuapp.com/health"
-          checkstring: "ok"
+          checkstring: "oks"
