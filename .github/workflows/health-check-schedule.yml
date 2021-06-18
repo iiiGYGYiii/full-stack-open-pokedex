@@ -1,8 +1,8 @@
-name: Deployment Pipeline
+name: Scheduled Health Checker
 
 on:
   schedule:
-    - cron: '1/15 * * * * *'
+    - cron: '1/15 * * * *'
 
 jobs:
   scheduled-action:
