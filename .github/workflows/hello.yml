@@ -18,3 +18,11 @@ jobs:
       - name: All items in Directory
         run: |
           ls
+      - name: commit messages
+        env: 
+          COMMIT_MESSAGES: ${{toJson(github.event.commits.*.message[0])}}
+        run: echo "$COMMIT_MESSAGES"
+      - name: commit messages
+        env: 
+          COMMITS: ${{toJson(github.event.commits)}}
+        run: echo "$COMMITS"

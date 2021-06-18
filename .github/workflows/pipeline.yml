@@ -39,7 +39,3 @@ jobs:
           healthcheck: "https://pokedex-iiigygyiii.herokuapp.com/health"
           checkstring: "ok"
           rollbackonhealthcheckfailed: true
-      - name: commit messages
-        env: 
-          COMMIT_MESSAGES: ${{toJson(github.event.commits.*.message[0])}}
-        run: echo "$COMMIT_MESSAGES"
