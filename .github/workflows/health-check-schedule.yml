@@ -10,6 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Check health of HerokuAPP
+        uses: jtalk/url-health-check-action@v1.2
         with:
           url: http://iiigygyiii-pokedex.herokuapp.com/
           follow-redirect: no
