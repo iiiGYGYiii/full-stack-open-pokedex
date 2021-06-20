@@ -1,13 +1,25 @@
-# name: Scheduled Health Checker
+name: Scheduled Health Checker
 
-# on:
+on:
+  push:
+    branches:
+      - main
 #   schedule:
 #     - cron: '1/15 * * * *'
 # #4 update
-# jobs:
-#   scheduled-action:
-#     runs-on: ubuntu-18.04
-#     steps:
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Say hello
+        run: |
+          echo "Hello World!"
+      - name: Give date
+        run: |
+          date
+      - name: All items in Directory
+        run: |
+          ls
 #       - uses: actions/checkout@v2
 #       - name: Check health of HerokuAPP
 #         if: ${{ github.event_name == 'push' && contains(github.event.commits[0].message, '#check-health') }}
