@@ -1,0 +1,19 @@
+# name: Scheduled Health Checker
+
+# on:
+#   schedule:
+#     - cron: '1/15 * * * *'
+# #4 update
+# jobs:
+#   scheduled-action:
+#     runs-on: ubuntu-18.04
+#     steps:
+#       - uses: actions/checkout@v2
+#       - name: Check health of HerokuAPP
+#         if: ${{ github.event_name == 'push' && contains(github.event.commits[0].message, '#check-health') }}
+#         uses: jtalk/url-health-check-action@v1.2
+#         with:
+#           url: http://pokedex-iiigygyiii.herokuapp.com/
+#           follow-redirect: no
+#           max-attempts: 3
+#           retry-delay: 10s
